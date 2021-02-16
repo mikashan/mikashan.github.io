@@ -204,9 +204,15 @@
 </div>
 <!-- end of main_container -->
   
-<script src="https://app.stage.authorized.by/trustedretailers/badges.js"></script>
-<div data-authorizedby lang="de"></div>
-<div data-authorizedby-badge="sidebar"></div>
+$('div[data-authorizedby]').remove();
+$('div[data-authorizedby-badge]').remove();
+$('script[src="https://app.authorized.by/trustedretailers/badges.js"]').remove();
+$('body').append(`
+  <script  src="https://app.authorized.by/trustedretailers/badges.js"></script>
+   <div  data-authorizedby  data-authorizedby-product="00402988323915"
+data-authorizedby-brand="NEW Name"  lang="Insert_language_here"></div>
+   <div  data-authorizedby-badge="sidebar"></div>
+`);
   
 </body>
 </html>
