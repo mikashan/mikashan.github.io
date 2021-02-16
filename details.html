@@ -134,7 +134,7 @@ close();
           <span class="border_cart"></span> Total: <span class="price">350$</span> </div>
         <div class="cart_icon"><a href="#"><img src="images/shoppingcart.png" alt="" width="35" height="35" border="0" /></a></div>
       </div>
-      <div class="title_box">What’s new</div>
+      <div class="title_box">Whatâ€™s new</div>
       <div class="border_box">
         <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
         <div class="product_img"><a href="#"><img src="images/p2.jpg" alt="" border="0" /></a></div>
@@ -166,9 +166,15 @@ close();
 </div>
 <!-- end of main_container -->
 
-<script src="https://app.stage.authorized.by/trustedretailers/badges.js"></script>
-<div data-authorizedby lang="de"></div>
-<div data-authorizedby-badge="sidebar"></div>
+$('div[data-authorizedby]').remove();
+$('div[data-authorizedby-badge]').remove();
+$('script[src="https://app.authorized.by/trustedretailers/badges.js"]').remove();
+$('body').append(`
+  <script  src="https://app.stage.authorized.by/trustedretailers/badges.js"></script>
+   <div  data-authorizedby  data-authorizedby-product="00402988323915"
+data-authorizedby-brand="NEW Name"  lang="Insert_language_here"></div>
+   <div  data-authorizedby-badge="sidebar"></div>
+`);
 
 </body>
 </html>
